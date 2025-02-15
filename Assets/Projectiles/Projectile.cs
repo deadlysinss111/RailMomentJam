@@ -2,38 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectil : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField] private Rigidbody Rigidbody;
-    [SerializeField]private float speed = 1000;
-    private Vector3 direction;
-    public int damage = 10;
-    private float lifeTime = 0;
-    public float lifeTimeMax = 1;  
-    public bool haveLifeTime = true;
-    public bool bTakeDamage = true;
-
+    [SerializeField] private float speed = 1000;
+    [SerializeField] private int damage = 10;
+    [SerializeField] private float lifeTimeMax = 1;  
+    [SerializeField] private bool haveLifeTime = true;
+    
+    private float currentLifeTime = 0;
 
     public int GetDamage()
     {
         return damage;
-    }
-    public void SetDamage(int _damage)
-    {
-        damage = _damage;
-    }
-    void Start()
-    {
-        Rigidbody.AddForce(direction * speed);
-        SetDamage(damage);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (haveLifeTime) {
-            lifeTime += Time.deltaTime;
-            if (lifeTime >= lifeTimeMax)
+            currentLifeTime += Time.deltaTime;
+            if (currentLifeTime >= lifeTimeMax)
             {
                 Destroy(this.gameObject);
             }

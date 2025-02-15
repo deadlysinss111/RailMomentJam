@@ -96,5 +96,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5410695657476755907, guid: 46566c2098ebf47438593934b0cc779b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6834487785050179721}
   m_SourcePrefab: {fileID: 100100000, guid: 46566c2098ebf47438593934b0cc779b, type: 3}
+--- !u!1 &9118001553837337755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5410695657476755907, guid: 46566c2098ebf47438593934b0cc779b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3863808182502145368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6834487785050179721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118001553837337755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa50f7493ba066a488431b57cdbd9c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 0}
+  speed: 1000
+  damage: 10
+  lifeTimeMax: 1
+  haveLifeTime: 1
+  bTakeDamage: 1
