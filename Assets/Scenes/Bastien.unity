@@ -267,6 +267,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &144507524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144507526}
+  - component: {fileID: 144507525}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &144507525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144507524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5735e23ab40a06a499b6250054654a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballCount: 50
+  ball: {fileID: 0}
+--- !u!4 &144507526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144507524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.99, y: 0.96000004, z: -4.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270450994
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,10 +490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b8970ac798f8545a8a983c51d42c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBeSpawned: {fileID: 5410695657476755907, guid: 46566c2098ebf47438593934b0cc779b,
-    type: 3}
+  objectToBeSpawned1: {fileID: 0}
+  objectToBeSpawned2: {fileID: 0}
   spawnDistance: 2
   forceAmount: 500
+  playerManager: {fileID: 0}
 --- !u!4 &952127417
 Transform:
   m_ObjectHideFlags: 0
@@ -1018,6 +1065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5735e23ab40a06a499b6250054654a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballCount: 10
   ball: {fileID: 0}
 --- !u!1 &1705616472
 GameObject:
@@ -1396,3 +1444,4 @@ SceneRoots:
   - {fileID: 1823788104}
   - {fileID: 1013984600}
   - {fileID: 270451000}
+  - {fileID: 144507526}
