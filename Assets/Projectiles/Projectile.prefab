@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1542909219377348917}
   - component: {fileID: 8800002777584911037}
   - component: {fileID: 8224819277627894719}
+  - component: {fileID: 4497089227933056190}
   m_Layer: 6
   m_Name: Projectile
   m_TagString: Projectil
@@ -149,8 +150,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 8800002777584911037}
-  speed: 1000
+  speed: 9999
   damage: 10
   lifeTimeMax: 1
   haveLifeTime: 1
-  bTakeDamage: 1
+--- !u!114 &4497089227933056190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410695657476755907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlesys: {fileID: 0}
+  m_healthMax: 1
