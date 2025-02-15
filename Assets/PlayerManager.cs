@@ -6,35 +6,70 @@ using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] static public PlayerManager instance;
     int score = 0;
     float progress = 0;
-    int ballCount = 0;
+    public int ballCount = 10;
+    int ballToSpawn = 2;
     [SerializeField] private GameObject ball = null;
+ 
+    public int Getscore()
+    {
+        return score;
+    }
+    public void upScore()
+    {
+        score++;
+    }
+    public void SetScore(int _score)
+    {
+        score = _score;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (instance != null)
+        {
 
+            Destroy(this);
+            return;
+        }
+        instance = this;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+           ballToSpawn = 2;
+            Debug.Log("test");
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse2))
+        {
+            ballToSpawn = 1;
+            Debug.Log("test3");
+        }
+        //Debug.Log(ballCount);
+    }
 
     public virtual float progressUpdate()
     {
         progress += Time.deltaTime;
         return progress;
     }
-    //public virtual float progressUpdate(SceneGame _scene)
-    //{
-    //    progress += Time.deltaTime;
-    //    return 100 * progress / _scene.Gametime;
-    //}
- 
-
-    // Start is called before the first frame update
-    void Start()
+    public int GetBallCount()
     {
-        
+        return ballCount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeBallCount(int value)
     {
-        
+        ballCount += value;
     }
 
-    
+    public int GetBallToSpawn()
+    {
+        return ballToSpawn;
+    }
 }

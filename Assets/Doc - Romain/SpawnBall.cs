@@ -4,25 +4,44 @@ using UnityEngine;
 
 public class SpawnBall : MonoBehaviour
 {
-   [SerializeField] private GameObject objectToBeSpawned = null;
+    [SerializeField] private GameObject objectToBeSpawned1 = null;
+    [SerializeField] private GameObject objectToBeSpawned2 = null;
     private Camera cam = null;
     [SerializeField] private float spawnDistance = 20f;
     [SerializeField] private float forceAmount = 600f;
+    [SerializeField] PlayerManager playerManager = PlayerManager.instance;
+    int ballcount;
+    int ballToSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        ballcount = playerManager.GetBallCount();
+        ballToSpawn = playerManager.GetBallToSpawn();
+
+        GameObject ballToUse = null;
+
+        if (ballToSpawn == 1)
+        {
+            ballToUse = objectToBeSpawned1;
+        }
+        else if (ballToSpawn == 2)
+        {
+            ballToUse = objectToBeSpawned2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && ballcount > 0)
         {
             // 1️ Faire spawn la balle devant la caméra
             Vector3 spawnPosition = cam.transform.position + cam.transform.forward * spawnDistance;
-            GameObject ball = Instantiate(objectToBeSpawned, spawnPosition, Quaternion.identity);
+            GameObject ball = Instantiate(ballToUse, spawnPosition, Quaternion.identity);
 
             // 2️ Lancer un Raycast depuis la caméra vers la position de la souris
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -32,14 +51,12 @@ public class SpawnBall : MonoBehaviour
             // 3️ Si le Raycast touche quelque chose, appliquer une force vers ce point
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log("Mouse hit at: " + hit.point);
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
 
                 //Debug.Log("Hit position: " + hit.point);
 
                 if (rb != null)
                 {
-                        Debug.Log(hit.point);
                         Vector3 direction = (hit.point - spawnPosition).normalized; // Direction vers la cible
 
                         // 🔹 Aligner la balle avec la direction du tir
@@ -70,6 +87,7 @@ public class SpawnBall : MonoBehaviour
                     rb.AddForce(direction * forceAmount);
                 }
             }
+            playerManager.ChangeBallCount(-1);
         }
     }
 }

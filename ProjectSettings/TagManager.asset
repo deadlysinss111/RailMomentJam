@@ -8,6 +8,8 @@ TagManager:
   - Balle
   - Projectil
   - Cible
+  - Obstacle
+  - Rider
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - Water
   - UI
   - Balle
-  - 
-  - 
-  - 
+  - SpawnBall
+  - Collision camera
+  - Camera
   - 
   - 
   - 

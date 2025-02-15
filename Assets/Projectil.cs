@@ -5,39 +5,38 @@ using UnityEngine;
 public class Projectil : MonoBehaviour
 {
     [SerializeField] private Rigidbody Rigidbody;
-    [SerializeField]private float speed = 1;
-    [SerializeField]private int MaxHitpoint = 1;
+    [SerializeField]private float speed = 1000;
     private Vector3 direction;
+    public int damage = 10;
     private float lifeTime = 0;
+    public bool haveLifeTime = true;
+    public bool bTakeDamage = true;
 
-    private void OnCollisionEnter(Collision collision)
+
+    public int GetDamage()
     {
-        if (collision.gameObject.tag == "Cible")
-        {
-            MaxHitpoint--;
-            if (MaxHitpoint <= 0)
-            {
-                Destroy(this.gameObject);
-            }
-            print("Enter");
-        }
+        return damage;
     }
-
-    // Start is called before the first frame update
+    public void SetDamage(int _damage)
+    {
+        damage = _damage;
+    }
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        Rigidbody.AddForce(direction * speed);
+        SetDamage(damage);
     }
 
     // Update is called once per frame
     void Update()
     {
-        lifeTime+= Time.deltaTime;
-        Debug.Log(lifeTime);
-        if (lifeTime >= 1)
-        {
-            Debug.Log("Destroy");
-            Destroy(this.gameObject);
+        if (haveLifeTime) {
+            lifeTime += Time.deltaTime;
+            if (lifeTime >= 1)
+            {
+                Destroy(this.gameObject);
+            }
         }
+
     }
 }
