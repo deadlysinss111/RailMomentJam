@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ResponsiveMainMenu : MonoBehaviour
@@ -14,11 +15,21 @@ public class ResponsiveMainMenu : MonoBehaviour
     // Context data
     Vector2Int screenSize;
 
-    // TODO: kinda remove
-    // Placement parameters
-    public float IMG_logoTopOffset;         // (unit: % of the screen)
-    public float PAN_controlsBottomOffset;  // (unit: % of the screen)
-    public float BTN_buttonTopOffset;       // (unit: % of the screen)
+
+
+    /*
+     *  METHODS
+     */
+    public void Print()
+    {
+        Debug.Log("Deez nuts");
+    }
+    public void OpenSettingsMenu()
+    {
+        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
+
+
 
     /*
      *  UNITY METHODS
