@@ -16,9 +16,25 @@ public class ChunkHandler : MonoBehaviour
         _loadedChunksData = new List<ChunkData>(loadedChunksAmount);
     }
 
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            LoadChunk();
+        }
+    }
+
     private void Start()
     {
-        //_loadedChunksData.Add()
+        _loadedChunksData.Add(chunkLibrary.library[Random.Range(0, chunkLibrary.library.Count)]);
+        _loadedChunks.Add(Instantiate(_loadedChunksData[0].prefab));
+        for (int i = 1; i < loadedChunksAmount; i++)
+        {
+            List<ChunkData> matching = GetMatchingChunks(_loadedChunksData[i - 1].gate.xConnection, _loadedChunksData[i - 1].gate.yConnection);
+            ChunkData found = matching[Random.Range(0, matching.Count)];
+            _loadedChunksData.Add(found);
+            _loadedChunks.Add(Instantiate(found.prefab, _loadedChunks[i - 1].Find("End").transform.position, _loadedChunks[i - 1].Find("End").transform.rotation));
+        }
     }
 
     List<ChunkData> GetMatchingChunks(Chunk.XConnection xCon,  Chunk.YConnection yCon)
@@ -36,10 +52,12 @@ public class ChunkHandler : MonoBehaviour
 
     void LoadChunk()
     {
-        Destroy(_loadedChunks[0]);
+        Destroy(_loadedChunks[0].gameObject);
         _loadedChunksData.RemoveAt(0);
+        _loadedChunks.RemoveAt(0);
         List<ChunkData> matching = GetMatchingChunks(_loadedChunksData[loadedChunksAmount - 2].gate.xConnection, _loadedChunksData[loadedChunksAmount - 2].gate.yConnection);
         ChunkData found = matching[Random.Range(0, matching.Count)];
-        _loadedChunks.Add(Instantiate(found.prefab));
+        _loadedChunksData.Add(found);
+        _loadedChunks.Add(Instantiate(found.prefab, _loadedChunks[loadedChunksAmount - 2].Find("End").transform.position, _loadedChunks[loadedChunksAmount - 2].Find("End").transform.rotation));
     }
 }

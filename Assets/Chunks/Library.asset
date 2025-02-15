@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68667849764208d40ab974a65ae4c8af, type: 3}
   m_Name: Library
   m_EditorClassIdentifier: 
-  library: []
+  library:
+  - prefab: {fileID: 8927785320675305719, guid: 05d5b685342308b4bb2047351355c4d5,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 8927785320675305719, guid: 05d5b685342308b4bb2047351355c4d5,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
