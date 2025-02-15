@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742902539}
   - component: {fileID: 742902538}
+  - component: {fileID: 742902540}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -148,10 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b8970ac798f8545a8a983c51d42c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBeSpawned: {fileID: 5991543744056819701, guid: f0e76c98dca1e88418f0aded73b7ba5e,
+  objectToBeSpawned1: {fileID: 5991543744056819701, guid: f0e76c98dca1e88418f0aded73b7ba5e,
+    type: 3}
+  objectToBeSpawned2: {fileID: 5991543744056819701, guid: ac92f7c7f72e5c149ab85a5e2724461c,
     type: 3}
   spawnDistance: 2
   forceAmount: 500
+  otherScript: {fileID: 742902540}
 --- !u!4 &742902539
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +171,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742902540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742902537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5735e23ab40a06a499b6250054654a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballCount: 10
+  ball: {fileID: 742902537}
 --- !u!1 &843249931
 GameObject:
   m_ObjectHideFlags: 0

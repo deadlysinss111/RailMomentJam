@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class SpawnBall : MonoBehaviour
 {
-   [SerializeField] private GameObject objectToBeSpawned = null;
+   [SerializeField] private GameObject objectToBeSpawned1 = null;
+    [SerializeField] private GameObject objectToBeSpawned2 = null;
     private Camera cam = null;
     [SerializeField] private float spawnDistance = 20f;
     [SerializeField] private float forceAmount = 600f;
+    [SerializeField] PlayerManager playerManager;
+    int ballcount;
+    int ballToSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +22,27 @@ public class SpawnBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        ballcount = playerManager.GetBallCount();
+        ballToSpawn = playerManager.GetBallToSpawn();
+
+        GameObject ballToUse = null;
+
+        if (ballToSpawn == 1)
+        {
+            ballToUse = objectToBeSpawned1;
+            Debug.Log("test1");
+        }
+        else if (ballToSpawn == 2)
+        {
+            ballToUse = objectToBeSpawned2;
+            Debug.Log("test2");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && ballcount > 0)
         {
             // 1️ Faire spawn la balle devant la caméra
             Vector3 spawnPosition = cam.transform.position + cam.transform.forward * spawnDistance;
-            GameObject ball = Instantiate(objectToBeSpawned, spawnPosition, Quaternion.identity);
+            GameObject ball = Instantiate(ballToUse, spawnPosition, Quaternion.identity);
 
             // 2️ Lancer un Raycast depuis la caméra vers la position de la souris
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -70,6 +90,13 @@ public class SpawnBall : MonoBehaviour
                     rb.AddForce(direction * forceAmount);
                 }
             }
+            playerManager.ChangeBallCount(-1);
         }
+
+        //Debug.Log(ballToSpawn);
+
+        
+
+        
     }
 }

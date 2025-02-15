@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.SearchService;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class PlayerManager : MonoBehaviour
+{
+    int score = 0;
+    float progress = 0;
+    public int ballCount = 10;
+    int ballToSpawn = 2;
+    [SerializeField] private GameObject ball = null;
+ 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+           ballToSpawn = 2;
+            Debug.Log("test");
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse2))
+        {
+            ballToSpawn = 1;
+            Debug.Log("test3");
+        }
+        //Debug.Log(ballCount);
+    }
+
+    public virtual float progressUpdate()
+    {
+        progress += Time.deltaTime;
+        return progress;
+    }
+    //public virtual float progressUpdate(SceneGame _scene)
+    //{
+    //    progress += Time.deltaTime;
+    //    return 100 * progress / _scene.Gametime;
+    //}
+
+    public int GetBallCount()
+    {
+        return ballCount;
+    }
+
+    public void ChangeBallCount(int value)
+    {
+        ballCount += value;
+    }
+
+    public int GetBallToSpawn()
+    {
+        return ballToSpawn;
+    }
+}
