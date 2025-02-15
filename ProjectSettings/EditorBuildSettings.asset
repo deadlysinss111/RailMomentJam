@@ -9,13 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/UIScenes/MainMenu.unity
-    guid: fa7feba847b32aa418f608cc0cb00544
-  - enabled: 1
-    path: Assets/Scenes/UIScenes/SettingsMenu.unity
-    guid: 96a8a1778e1933b47be5c67781840d9e
-  - enabled: 1
-    path: Assets/Scenes/UIScenes/WIP.unity
-    guid: c083e508e88bf0745afab584dcfc91c5
+    path: Assets/Scenes/DefeatScene.unity
+    guid: ed4faf09ef6fb074a8fb328137a24d24
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
