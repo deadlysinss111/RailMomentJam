@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
+    PlayerManager instance;
     int score = 0;
     float progress = 0;
     public int ballCount = 10;
@@ -23,7 +24,12 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (instance == null)
+        {
+            Destroy(this);
+            return;
+        }
+        instance = this;
     }
 
     // Update is called once per frame
@@ -47,12 +53,6 @@ public class PlayerManager : MonoBehaviour
         progress += Time.deltaTime;
         return progress;
     }
-    //public virtual float progressUpdate(SceneGame _scene)
-    //{
-    //    progress += Time.deltaTime;
-    //    return 100 * progress / _scene.Gametime;
-    //}
-
     public int GetBallCount()
     {
         return ballCount;
