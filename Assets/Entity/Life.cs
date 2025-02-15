@@ -28,7 +28,7 @@ public class Life : MonoBehaviour
         }
     }
 
-    private void Die()
+    virtual protected void Die()
     {
         PlayerManager.instance.upScore();
         gameObject.SetActive(false);

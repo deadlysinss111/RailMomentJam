@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
@@ -12,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     public int ballCount = 10;
     int ballToSpawn = 2;
     [SerializeField] private GameObject ball = null;
- 
+    [NonSerialized] public uint _nextBalloonSpawnAmount;
     public int Getscore()
     {
         return score;
