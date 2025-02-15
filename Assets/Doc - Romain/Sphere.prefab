@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 6620475053228965285}
   - component: {fileID: 4050815479625221612}
   - component: {fileID: 3404336900437070600}
+  - component: {fileID: 3820730119717385968}
   - component: {fileID: -5029065758980023192}
+  - component: {fileID: 1485879545338376610}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Balle
@@ -108,6 +110,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3820730119717385968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5991543744056819701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &-5029065758980023192
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +149,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1485879545338376610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5991543744056819701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8ea1cbf03aec040b5a550e9f934230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
