@@ -9,25 +9,8 @@ public class SlightlyResponsiveUI : MonoBehaviour
     /*
      *  FIELDS
      */
-    // Canvas components
     CanvasScaler CanvasScalerComp;
-
-    // Context data
     Vector2Int screenSize;
-
-
-
-    /*
-     *  METHODS
-     */
-    public void OpenSettingsMenu()
-    {
-        SceneManager.LoadScene("SettingsMenu", LoadSceneMode.Additive);
-    }
-    public void OpenWIP()
-    {
-        SceneManager.LoadScene("WIP", LoadSceneMode.Additive);
-    }
 
 
 
