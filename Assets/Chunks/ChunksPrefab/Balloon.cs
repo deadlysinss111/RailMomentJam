@@ -4,7 +4,7 @@ using UnityEngine.Splines;
 public class Balloon : MonoBehaviour
 {
     public float liftSpeed = 1f;
-    public float lifetime = 10f;
+    public float lifetime = 8f;
     private float timer = 0f;
 
     void Start()

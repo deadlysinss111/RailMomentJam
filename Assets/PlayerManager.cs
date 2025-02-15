@@ -12,6 +12,17 @@ public class PlayerManager : MonoBehaviour
     public int ballCount = 10;
     int ballToSpawn = 2;
     [SerializeField] private GameObject ball = null;
+    public int nbSpawnBalloon = 1;
+
+    public int GetNBSpawnBalloon()
+    {
+        return nbSpawnBalloon;
+    }
+
+    public void SetNBBalloon(int nb)
+    {
+        nbSpawnBalloon = nb;
+    }
  
     public int Getscore()
     {

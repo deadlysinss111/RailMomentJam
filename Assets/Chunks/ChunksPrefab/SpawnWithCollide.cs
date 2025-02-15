@@ -5,8 +5,9 @@ using UnityEngine;
 public class SpawnWithCollide : MonoBehaviour
 {
     [SerializeField] private GameObject objectToBeSpawned = null;
+    [SerializeField] public PlayerManager playerManager;
     public float speed = 10f;
-    private int nbBalloon = 10;
+    private int nbBalloon = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class SpawnWithCollide : MonoBehaviour
         { 
             for (int i = 0; i < nbBalloon; i++)
             {
-                GameObject ball = Instantiate(objectToBeSpawned, transform.position + new Vector3(0, 10, 20), Quaternion.identity);
+                GameObject ball = Instantiate(objectToBeSpawned, transform.position + new Vector3(0, 7, 20), Quaternion.identity);
             }            
             Debug.Log("Spawn de balle");
             Destroy(gameObject);

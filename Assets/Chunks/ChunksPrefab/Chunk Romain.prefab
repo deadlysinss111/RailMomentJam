@@ -517,6 +517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f13fd6528cc1d549abed1f1853963e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBeSpawned: {fileID: 3949199910827782162, guid: abd0003972fa5ba43b20ce63e27b5866,
+  objectToBeSpawned: {fileID: 3881957763936935484, guid: cec4d0d8195018c49a79edd4f042c440,
     type: 3}
   speed: 10
