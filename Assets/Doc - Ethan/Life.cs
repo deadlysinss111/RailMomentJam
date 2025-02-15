@@ -51,6 +51,20 @@ public class Life : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigger");
+        if (other.gameObject.tag != "Projectil") return;
+        if (this.gameObject.tag == other.gameObject.tag) return;
+        if (!other.gameObject.TryGetComponent<Projectil>(out Projectil projectile)) return;
+        if (!other.gameObject.TryGetComponent<Life>(out Life life)) return;
+        if (projectile.bTakeDamage)
+        {
+            life.TakeDamage(projectile.GetDamage());
+        }
+        TakeDamage(projectile.GetDamage());
+        Debug.Log(projectile.GetDamage());
+    }
     void Update()
     {
         //Debug.Log(m_health);

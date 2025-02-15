@@ -9,6 +9,7 @@ public class Projectil : MonoBehaviour
     private Vector3 direction;
     public int damage = 10;
     private float lifeTime = 0;
+    public float lifeTimeMax = 1;  
     public bool haveLifeTime = true;
     public bool bTakeDamage = true;
 
@@ -32,7 +33,7 @@ public class Projectil : MonoBehaviour
     {
         if (haveLifeTime) {
             lifeTime += Time.deltaTime;
-            if (lifeTime >= 1)
+            if (lifeTime >= lifeTimeMax)
             {
                 Destroy(this.gameObject);
             }
