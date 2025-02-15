@@ -12,7 +12,14 @@ public class PlayerManager : MonoBehaviour
     int ballToSpawn = 2;
     [SerializeField] private GameObject ball = null;
  
-
+    public int Getscore()
+    {
+        return score;
+    }
+    public void SetScore(int _score)
+    {
+        score = _score;
+    }
     // Start is called before the first frame update
     void Start()
     {
