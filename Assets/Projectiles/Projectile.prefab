@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7878581327892589049}
   - component: {fileID: 1542909219377348917}
   - component: {fileID: 8800002777584911037}
-  - component: {fileID: 416791189514171589}
   - component: {fileID: 6206986742383589795}
+  - component: {fileID: -255487913160736757}
   m_Layer: 6
   m_Name: Projectile
   m_TagString: Projectil
@@ -137,22 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &416791189514171589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5410695657476755907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45917fd049eddda4e8bcd418d8e76c67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 8800002777584911037}
-  speed: 1
-  damage: 1
-  haveLifeTime: 1
 --- !u!114 &6206986742383589795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +150,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_healthMax: 1
+--- !u!114 &-255487913160736757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410695657476755907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa50f7493ba066a488431b57cdbd9c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 0}
+  speed: 1000
+  damage: 10
+  lifeTimeMax: 1
+  haveLifeTime: 1
+  bTakeDamage: 1
