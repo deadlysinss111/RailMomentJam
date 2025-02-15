@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnBall : MonoBehaviour
 {
-   [SerializeField] private GameObject objectToBeSpawned1 = null;
+    [SerializeField] private GameObject objectToBeSpawned1 = null;
     [SerializeField] private GameObject objectToBeSpawned2 = null;
     private Camera cam = null;
     [SerializeField] private float spawnDistance = 20f;
@@ -16,7 +16,8 @@ public class SpawnBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //cam = Camera.main;
     }
 
     // Update is called once per frame
