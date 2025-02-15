@@ -14,7 +14,7 @@ public class Balloon : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.up /** liftSpeed*/ * Time.deltaTime);
+        transform.Translate(new Vector3(0,1,0) /** liftSpeed*/ * Time.deltaTime);
 
         timer += Time.deltaTime;
 

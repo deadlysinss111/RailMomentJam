@@ -6,6 +6,7 @@ public class SpawnWithCollide : MonoBehaviour
 {
     [SerializeField] private GameObject objectToBeSpawned = null;
     public float speed = 10f;
+    private int nbBalloon = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,10 @@ public class SpawnWithCollide : MonoBehaviour
 
         if (other.gameObject.CompareTag("Rider"))
         { 
-            GameObject ball = Instantiate(objectToBeSpawned, transform.position, Quaternion.identity);
+            for (int i = 0; i < nbBalloon; i++)
+            {
+                GameObject ball = Instantiate(objectToBeSpawned, transform.position + new Vector3(0, 10, 20), Quaternion.identity);
+            }            
             Debug.Log("Spawn de balle");
             Destroy(gameObject);
         }
