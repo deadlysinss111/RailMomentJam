@@ -5,15 +5,14 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
     protected float m_health = 75f;
-    protected float m_healthMax = 75f;
-    public float damageAmount = 10f;
+    public float m_healthMax = 75f;
 
     virtual public float GetHealth()
     {
         return m_health;
     }
 
-    virtual public void SetHealth()
+    void Start()
     {
         m_health = m_healthMax;
     }
@@ -29,16 +28,30 @@ public class Life : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
         gameObject.SetActive(false);
     }
-    void OnCollisionEnter(Collision _other)
+    private void OnCollisionEnter(Collision _other)
     {
-        if (_other.gameObject.tag != "Obstacle")
+        Debug.Log("collision");
+        if (_other.gameObject.tag != "Projectil")return;
+        if (this.gameObject.tag == _other.gameObject.tag)return;
+        if (!(_other.gameObject.TryGetComponent<Projectil>(out Projectil projectile)))return;
+        if (!_other.gameObject.TryGetComponent<Life>(out Life life))return;
+
+
+        if (projectile.bTakeDamage)
         {
-            return;
+            life.TakeDamage(projectile.GetDamage());
         }
-        TakeDamage(damageAmount);
+        TakeDamage(projectile.GetDamage());
+        Debug.Log(projectile.GetDamage());
+
+
+    }
+    void Update()
+    {
+        //Debug.Log(m_health);
     }
 }

@@ -30,12 +30,10 @@ public class SpawnBall : MonoBehaviour
         if (ballToSpawn == 1)
         {
             ballToUse = objectToBeSpawned1;
-            Debug.Log("test1");
         }
         else if (ballToSpawn == 2)
         {
             ballToUse = objectToBeSpawned2;
-            Debug.Log("test2");
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && ballcount > 0)
@@ -52,14 +50,12 @@ public class SpawnBall : MonoBehaviour
             // 3️ Si le Raycast touche quelque chose, appliquer une force vers ce point
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log("Mouse hit at: " + hit.point);
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
 
                 //Debug.Log("Hit position: " + hit.point);
 
                 if (rb != null)
                 {
-                        Debug.Log(hit.point);
                         Vector3 direction = (hit.point - spawnPosition).normalized; // Direction vers la cible
 
                         // 🔹 Aligner la balle avec la direction du tir
@@ -92,11 +88,5 @@ public class SpawnBall : MonoBehaviour
             }
             playerManager.ChangeBallCount(-1);
         }
-
-        //Debug.Log(ballToSpawn);
-
-        
-
-        
     }
 }
