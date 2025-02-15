@@ -52,9 +52,15 @@ public class Life : MonoBehaviour
         {
             TakeDamage(1);
             Debug.Log("player collision Life");
+            
             return;
         }
-
+        if (gameObject.CompareTag("Cible"))
+        {
+            TakeDamage(1000);
+            Debug.Log("Cible collision Life");
+            return;
+        }
         if (_other.gameObject.tag != "Projectil")
             return;
 
