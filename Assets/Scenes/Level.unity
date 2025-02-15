@@ -1125,6 +1125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -738287145395664529, guid: 630c4b964faa9134591d81c601458c54,
         type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1017231267}
+    - target: {fileID: -738287145395664529, guid: 630c4b964faa9134591d81c601458c54,
+        type: 3}
       propertyPath: objectToBeSpawned
       value: 
       objectReference: {fileID: 7398934452675310008, guid: 7938a7a327dac9b4db8d12811e0b177d,
@@ -1461,6 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballCount: 999
+  balloonCount: 10
   ball: {fileID: 5410695657476755907, guid: 46566c2098ebf47438593934b0cc779b, type: 3}
 --- !u!4 &1017231268
 Transform:
@@ -1795,6 +1801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -738287145395664529, guid: 630c4b964faa9134591d81c601458c54,
         type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1017231267}
+    - target: {fileID: -738287145395664529, guid: 630c4b964faa9134591d81c601458c54,
+        type: 3}
       propertyPath: objectToBeSpawned
       value: 
       objectReference: {fileID: 7398934452675310008, guid: 7938a7a327dac9b4db8d12811e0b177d,
@@ -1817,7 +1828,7 @@ PrefabInstance:
     - target: {fileID: 7466718021002239635, guid: 630c4b964faa9134591d81c601458c54,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 252.83
+      value: 233.17
       objectReference: {fileID: 0}
     - target: {fileID: 7466718021002239635, guid: 630c4b964faa9134591d81c601458c54,
         type: 3}

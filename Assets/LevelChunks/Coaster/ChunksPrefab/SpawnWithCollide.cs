@@ -25,6 +25,8 @@ public class SpawnWithCollide : MonoBehaviour
     {
         //Debug.Log($"Collide detecte with {other.name}");
 
+        nbBalloon = playerManager.GetBalloonCount();
+
         if (other.gameObject.CompareTag("Rider"))
         { 
             for (int i = 0; i < nbBalloon; i++)

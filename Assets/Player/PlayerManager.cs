@@ -10,9 +10,22 @@ public class PlayerManager : MonoBehaviour
     int score = 0;
     float progress = 0;
     public int ballCount = 10;
+    public int balloonCount = 1;
     int ballToSpawn = 2;
     [SerializeField] private GameObject ball = null;
- 
+
+    public int GetBalloonCount()
+    {
+        return balloonCount;
+    } 
+
+    public void ChangeBalloonCount(int nb)
+    {
+        balloonCount += nb;
+
+        if (balloonCount < 1)
+            balloonCount = 1;
+    }
     public int Getscore()
     {
         return score;
