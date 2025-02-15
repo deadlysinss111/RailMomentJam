@@ -8,6 +8,8 @@ TagManager:
   - Balle
   - Projectil
   - Cible
+  - Obstacle
+  - player Life
   layers:
   - Default
   - TransparentFX
