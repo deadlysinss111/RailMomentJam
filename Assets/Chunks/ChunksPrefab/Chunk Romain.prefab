@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813597512378025850}
   - component: {fileID: 83805466920752635}
-  - component: {fileID: 7283315792401765802}
+  - component: {fileID: 1782503644415633682}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -118,35 +118,35 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2.9155617
+        z: -2.8891864
       TangentOut:
         x: 0
         y: 0
-        z: 3.1396692
+        z: 3.0976346
       Rotation:
         value:
-          x: -0.0000019617985
-          y: -0.124360465
-          z: 0.000015537844
-          w: 0.9922371
+          x: -0.059528496
+          y: -0.12345959
+          z: -0.0040089446
+          w: 0.99055445
     - Position:
-        x: -4.688961
-        y: 8.8
-        z: 17.57798
+        x: -4.57
+        y: 11.09
+        z: 17.24
       TangentIn:
         x: -0
         y: -0
-        z: -3.5327168
+        z: -3.5385573
       TangentOut:
         x: 0
         y: 0
-        z: 4.1971087
+        z: 4.196289
       Rotation:
         value:
-          x: -0.07718389
-          y: -0.16921249
-          z: -0.013045443
-          w: 0.982466
+          x: -0.09289388
+          y: -0.16958472
+          z: -0.023127796
+          w: 0.98085517
     - Position:
         x: -8.288961
         y: 13.1
@@ -154,17 +154,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -4.870443
+        z: -4.7826552
       TangentOut:
         x: 0
         y: 0
-        z: 5.7639956
+        z: 5.695521
       Rotation:
         value:
-          x: -0.17933097
-          y: 0.0024410884
-          z: 0.0017324003
-          w: 0.9837842
+          x: -0.13683714
+          y: -0.0029538716
+          z: -0.014146251
+          w: 0.9904881
     - Position:
         x: -3.0889611
         y: 20.4
@@ -325,7 +325,7 @@ MonoBehaviour:
       m_Data: []
   m_Knots:
     m_KnotsLink: []
---- !u!114 &7283315792401765802
+--- !u!114 &1782503644415633682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,12 +340,13 @@ MonoBehaviour:
   m_Container: {fileID: 83805466920752635}
   m_ItemsToInstantiate:
   - prefab: {fileID: 0}
-    Prefab: {fileID: 919132149155446097, guid: 85a779bbdf10dc54985c383b7dbf0b03, type: 3}
+    Prefab: {fileID: 4646489083720261979, guid: 2ac8aa48c84f85c4b92931133e9a0f1d,
+      type: 3}
     probability: 0
     Probability: 0
   m_Method: 1
   m_Space: 0
-  m_Spacing: {x: 1.04, y: 1.04}
+  m_Spacing: {x: 0.27, y: 0.27}
   m_Up: 1
   m_Forward: 2
   m_PositionOffset:
@@ -374,4 +375,4 @@ MonoBehaviour:
     space: 0
   m_DeprecatedInstances: []
   m_AutoRefresh: 1
-  m_Seed: -64614
+  m_Seed: -4890772
