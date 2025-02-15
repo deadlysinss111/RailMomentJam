@@ -30,6 +30,7 @@ public class Life : MonoBehaviour
 
     private void Die()
     {
+        PlayerManager.instance.upScore();
         gameObject.SetActive(false);
     }
     private void OnCollisionEnter(Collision _other)
