@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ResponsiveMainMenu : MonoBehaviour
+public class SlightlyResponsiveUI : MonoBehaviour
 {
     /*
      *  FIELDS
@@ -20,13 +20,13 @@ public class ResponsiveMainMenu : MonoBehaviour
     /*
      *  METHODS
      */
-    public void Print()
-    {
-        Debug.Log("Deez nuts");
-    }
     public void OpenSettingsMenu()
     {
-        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+        SceneManager.LoadScene("SettingsMenu", LoadSceneMode.Additive);
+    }
+    public void OpenWIP()
+    {
+        SceneManager.LoadScene("WIP", LoadSceneMode.Additive);
     }
 
 

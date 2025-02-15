@@ -37,7 +37,7 @@ public class SettingsManager : MonoBehaviour
     public void CloseSettingsMenu()
     {
         //Debug.LogWarning("func CloseSettingsMenu: NOT IMPLEMENTED !");
-        SceneManager.UnloadSceneAsync("Settings");
+        SceneManager.UnloadSceneAsync("SettingsMenu");
     }
 
 
