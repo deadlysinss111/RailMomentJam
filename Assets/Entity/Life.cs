@@ -43,46 +43,40 @@ public class Life : MonoBehaviour
         PlayerManager.instance.upScore();
         gameObject.SetActive(false);
     }
+
     private void OnCollisionEnter(Collision _other)
     {
-        if (this.gameObject.CompareTag("player collision"))
+        CheckForDamage(_other.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        CheckForDamage(other.gameObject);
+    }
+
+    private void CheckForDamage(GameObject _other)
+    {
+        Debug.Log("Collision with tag: " + _other.gameObject.tag);
+
+        if (gameObject.CompareTag("player Life"))
         {
-            TakeDamage(1);  
-            Debug.Log("player collision colide");
+            TakeDamage(1);
+            Debug.Log("player collision Life");
             return;
         }
 
+        if (_other.gameObject.tag != "Projectil")
+            return;
 
-        if (_other.gameObject.tag != "Projectil")return;
-        if (this.gameObject.tag == _other.gameObject.tag)return;
+        if (this.gameObject.tag == _other.gameObject.tag)
+            return;
 
-        if (!(_other.gameObject.TryGetComponent<Projectil>(out Projectil projectile)))return;
-        if (!_other.gameObject.TryGetComponent<Life>(out Life life))return;
+        if (!(_other.gameObject.TryGetComponent<Projectile>(out Projectile projectile)))
+            return;
 
-
-        if (projectile.bTakeDamage)
-        {
-            life.TakeDamage(projectile.GetDamage());
-        }
         TakeDamage(projectile.GetDamage());
-        Debug.Log(projectile.GetDamage());
-
-
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("trigger");
-        if (other.gameObject.tag != "Projectil") return;
-        if (this.gameObject.tag == other.gameObject.tag) return;
-        if (!other.gameObject.TryGetComponent<Projectil>(out Projectil projectile)) return;
-        if (!other.gameObject.TryGetComponent<Life>(out Life life)) return;
-        if (projectile.bTakeDamage)
-        {
-            life.TakeDamage(projectile.GetDamage());
-        }
-        TakeDamage(projectile.GetDamage());
-        Debug.Log(projectile.GetDamage());
-    }
+
     void Update()
     {
         //Debug.Log(m_health);
