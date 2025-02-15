@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8927785320675305719}
   m_Layer: 0
-  m_Name: try1
+  m_Name: 45degreses rotation left side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
