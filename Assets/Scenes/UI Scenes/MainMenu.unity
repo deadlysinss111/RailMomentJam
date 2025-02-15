@@ -1371,7 +1371,7 @@ PrefabInstance:
     - target: {fileID: 317758400511084906, guid: 0688ad8af051640478a28ba953061d97,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenWIP
+      value: LoadFirstLevel
       objectReference: {fileID: 0}
     - target: {fileID: 317758400511084906, guid: 0688ad8af051640478a28ba953061d97,
         type: 3}

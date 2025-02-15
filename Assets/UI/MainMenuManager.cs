@@ -12,8 +12,12 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("SettingsMenu", LoadSceneMode.Additive);
     }
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene("Level", LoadSceneMode.Single);
+    }
     public void OpenWIP()
     {
-        SceneManager.LoadScene("WIP", LoadSceneMode.Additive);
+        SceneManager.LoadScene("WIP", LoadSceneMode.Single);
     }
 }
