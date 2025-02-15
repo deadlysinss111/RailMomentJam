@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 416791189514171589, guid: 46566c2098ebf47438593934b0cc779b,
         type: 3}
       propertyPath: haveLifeTime
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219521789463250885, guid: 46566c2098ebf47438593934b0cc779b,
         type: 3}

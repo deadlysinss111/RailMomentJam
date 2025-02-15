@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class SpawnBall : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SpawnBall : MonoBehaviour
     [SerializeField] private float spawnDistance = 20f;
     [SerializeField] private float forceAmount = 600f;
     [SerializeField] PlayerManager playerManager;
+    [SerializeField] SplineAnimate spline;
     int ballcount;
     int ballToSpawn;
 
@@ -61,8 +63,10 @@ public class SpawnBall : MonoBehaviour
                         // 🔹 Aligner la balle avec la direction du tir
                         ball.transform.rotation = Quaternion.LookRotation(direction);
 
-                        // 🔹 Appliquer la force dans la même direction
-                        rb.AddForce(direction * forceAmount);
+                    // 🔹 Appliquer la force dans la même direction
+                    float speed = spline.MaxSpeed;
+                    Debug.Log(speed);
+                    rb.AddForce(direction * (forceAmount + speed * 100));
                     
                 }
             }
