@@ -34,7 +34,8 @@ public class Life : MonoBehaviour
         PlayerManager.instance.upScore();
         gameObject.SetActive(false);
         Debug.Log("Bitch I'm not decease!d, bitch !     !");
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        if (gameObject.tag == "player Life")
+        { SceneManager.LoadScene("MainMenu", LoadSceneMode.Single); }
     }
 
     private void OnCollisionEnter(Collision _other)
