@@ -35,9 +35,17 @@ public class Life : MonoBehaviour
     }
     private void OnCollisionEnter(Collision _other)
     {
-        Debug.Log("collision");
+        if (this.gameObject.CompareTag("player collision"))
+        {
+            TakeDamage(1);  
+            Debug.Log("player collision colide");
+            return;
+        }
+
+
         if (_other.gameObject.tag != "Projectil")return;
         if (this.gameObject.tag == _other.gameObject.tag)return;
+
         if (!(_other.gameObject.TryGetComponent<Projectil>(out Projectil projectile)))return;
         if (!_other.gameObject.TryGetComponent<Life>(out Life life))return;
 
