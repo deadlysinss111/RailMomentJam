@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnBall : MonoBehaviour
 {
-   [SerializeField] private GameObject objectToBeSpawned1 = null;
+    [SerializeField] private GameObject objectToBeSpawned1 = null;
     [SerializeField] private GameObject objectToBeSpawned2 = null;
     private Camera cam = null;
-    [SerializeField] private float spawnDistance = 20f;
+    [SerializeField] private float spawnDistance = 30f;
     [SerializeField] private float forceAmount = 600f;
     [SerializeField] PlayerManager playerManager = PlayerManager.instance;
     int ballcount;
@@ -17,6 +17,7 @@ public class SpawnBall : MonoBehaviour
     void Start()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -52,18 +53,18 @@ public class SpawnBall : MonoBehaviour
             {
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
 
-                //Debug.Log("Hit position: " + hit.point);
+                Debug.Log("Hit position: " + hit.point);
 
                 if (rb != null)
                 {
-                        Vector3 direction = (hit.point - spawnPosition).normalized; // Direction vers la cible
+                    Vector3 direction = (hit.point - spawnPosition).normalized; // Direction vers la cible
 
-                        // 🔹 Aligner la balle avec la direction du tir
-                        ball.transform.rotation = Quaternion.LookRotation(direction);
+                    // 🔹 Aligner la balle avec la direction du tir
+                    ball.transform.rotation = Quaternion.LookRotation(direction);
 
-                        // 🔹 Appliquer la force dans la même direction
-                        rb.AddForce(direction * forceAmount);
-                    
+                    // 🔹 Appliquer la force dans la même direction
+                    rb.AddForce(direction * forceAmount *  6);
+
                 }
             }
             else

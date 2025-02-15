@@ -8,6 +8,7 @@ public class SpawnWithCollide : MonoBehaviour
     [SerializeField] public PlayerManager playerManager = null;
     public float speed = 10f;
     private int nbBalloon = 10;
+    public Vector3 spawnPoint = new Vector3(0, 0, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class SpawnWithCollide : MonoBehaviour
 
                 GameObject ball = Instantiate(
                     objectToBeSpawned,
-                    transform.position + new Vector3(0, 7, 20) + randomOffset,
+                    transform.position + spawnPoint + randomOffset,
                     Quaternion.identity
                 );
             }            
