@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class ChunkHandler : MonoBehaviour
 {
     [SerializeField] int loadedChunksAmount = 16;
     [SerializeField] ChunkLibrary chunkLibrary;
+    [SerializeField] SplineAnimate wagon;
 
     List<Transform> _loadedChunks;
     List<ChunkData> _loadedChunksData;
@@ -18,7 +21,14 @@ public class ChunkHandler : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (wagon.NormalizedTime >= .99f)
+        {
+            wagon.Container = _loadedChunks[1].Find("Spline").GetComponent<SplineContainer>();
+            //wagon.Restart(false);
+            wagon.Play();
+            LoadChunk();
+        }
+        if (Input.GetMouseButtonDown(0))
         {
             LoadChunk();
         }
@@ -28,12 +38,16 @@ public class ChunkHandler : MonoBehaviour
     {
         _loadedChunksData.Add(chunkLibrary.library[Random.Range(0, chunkLibrary.library.Count)]);
         _loadedChunks.Add(Instantiate(_loadedChunksData[0].prefab));
+        wagon.Container = _loadedChunks[0].Find("Spline").GetComponent<SplineContainer>();
         for (int i = 1; i < loadedChunksAmount; i++)
         {
             List<ChunkData> matching = GetMatchingChunks(_loadedChunksData[i - 1].gate.xConnection, _loadedChunksData[i - 1].gate.yConnection);
             ChunkData found = matching[Random.Range(0, matching.Count)];
             _loadedChunksData.Add(found);
-            _loadedChunks.Add(Instantiate(found.prefab, _loadedChunks[i - 1].Find("End").transform.position, _loadedChunks[i - 1].Find("End").transform.rotation));
+            List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[i-1].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
+            var lastKnot = knotCollec[knotCollec.Count - 1];
+            Transform splineTransform = _loadedChunks[i - 1].Find("Spline");
+            _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position + splineTransform.position, (Quaternion)lastKnot.Rotation * splineTransform.rotation));
         }
     }
 
@@ -58,6 +72,8 @@ public class ChunkHandler : MonoBehaviour
         List<ChunkData> matching = GetMatchingChunks(_loadedChunksData[loadedChunksAmount - 2].gate.xConnection, _loadedChunksData[loadedChunksAmount - 2].gate.yConnection);
         ChunkData found = matching[Random.Range(0, matching.Count)];
         _loadedChunksData.Add(found);
-        _loadedChunks.Add(Instantiate(found.prefab, _loadedChunks[loadedChunksAmount - 2].Find("End").transform.position, _loadedChunks[loadedChunksAmount - 2].Find("End").transform.rotation));
+        List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[loadedChunksAmount - 2].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
+        var lastKnot = knotCollec[knotCollec.Count-1];
+        _loadedChunks.Add(Instantiate(found.prefab, lastKnot.Position, lastKnot.Rotation));
     }
 }
