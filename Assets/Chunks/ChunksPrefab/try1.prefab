@@ -29,72 +29,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8810672200465085030}
-  - {fileID: 434629278058331347}
   - {fileID: 2710160476431941484}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4599439806123255423
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8810672200465085030}
-  m_Layer: 0
-  m_Name: Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8810672200465085030
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4599439806123255423}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8927785320675305719}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6003251921439198746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 434629278058331347}
-  m_Layer: 0
-  m_Name: End
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &434629278058331347
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6003251921439198746}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8927785320675305719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7489457265550518889
 GameObject:
@@ -122,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 7489457265550518889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.742761, y: 0, z: 0.0823431}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,43 +93,63 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0
+        x: -0.09
         y: 0
-        z: 0
+        z: -3.25
       TangentIn:
         x: -0
         y: -0
-        z: -0.3922448
+        z: -0.49870902
       TangentOut:
         x: 0
         y: 0
-        z: 0.3922448
+        z: 0.49870902
       Rotation:
         value:
           x: 0
-          y: 0.6884594
+          y: 0.21288301
           z: 0
-          w: 0.725275
+          w: 0.9770778
     - Position:
-        x: 3.9171314
+        x: 1.9846618
         y: 0
-        z: 0.20415378
+        z: 1.2850685
+      TangentIn:
+        x: 0.00000020861626
+        y: 0
+        z: -1.0660752
+      TangentOut:
+        x: 1.5913577
+        y: 0
+        z: 1.215647
+      Rotation:
+        value:
+          x: -0
+          y: 0.47774878
+          z: -0
+          w: 0.8784965
+    - Position:
+        x: 4
+        y: 1.448
+        z: 2.59
       TangentIn:
         x: -0
         y: -0
-        z: -0.3922448
+        z: -0.2803772
       TangentOut:
         x: 0
         y: 0
-        z: 0.3922448
+        z: 0.2803772
       Rotation:
         value:
-          x: 0
-          y: 0.6884594
-          z: 0
-          w: 0.725275
+          x: -0.23546404
+          y: 0.4602681
+          z: 0.1280513
+          w: 0.8463527
     m_MetaData:
     - Mode: 0
+      Tension: 0.5
+    - Mode: 4
       Tension: 0.5
     - Mode: 0
       Tension: 0.5

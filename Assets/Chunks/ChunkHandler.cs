@@ -24,12 +24,8 @@ public class ChunkHandler : MonoBehaviour
         if (wagon.NormalizedTime >= .99f)
         {
             wagon.Container = _loadedChunks[1].Find("Spline").GetComponent<SplineContainer>();
-            //wagon.Restart(false);
+            wagon.Restart(true);
             wagon.Play();
-            LoadChunk();
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
             LoadChunk();
         }
     }
@@ -46,8 +42,11 @@ public class ChunkHandler : MonoBehaviour
             _loadedChunksData.Add(found);
             List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[i-1].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
             var lastKnot = knotCollec[knotCollec.Count - 1];
+            //var lastKnot = knotCollec[knotCollec.Count - 1];
             Transform splineTransform = _loadedChunks[i - 1].Find("Spline");
-            _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position + splineTransform.position, (Quaternion)lastKnot.Rotation * splineTransform.rotation));
+            var newKnotCollec = (List<BezierKnot>)found.prefab.Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
+            var newKnot = newKnotCollec[0];
+            _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position - (Vector3)newKnot.Position + splineTransform.position, splineTransform.rotation));
         }
     }
 
@@ -74,6 +73,9 @@ public class ChunkHandler : MonoBehaviour
         _loadedChunksData.Add(found);
         List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[loadedChunksAmount - 2].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
         var lastKnot = knotCollec[knotCollec.Count-1];
-        _loadedChunks.Add(Instantiate(found.prefab, lastKnot.Position, lastKnot.Rotation));
+        Transform splineTransform = _loadedChunks[loadedChunksAmount - 2].Find("Spline");
+        var newKnotCollec = (List<BezierKnot>)found.prefab.Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
+        var newKnot = newKnotCollec[0];
+        _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position - (Vector3)newKnot.Position + splineTransform.position, splineTransform.rotation));
     }
 }
