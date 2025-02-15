@@ -13,12 +13,7 @@ MonoBehaviour:
   m_Name: Library
   m_EditorClassIdentifier: 
   library:
-  - prefab: {fileID: 8927785320675305719, guid: 05d5b685342308b4bb2047351355c4d5,
-      type: 3}
-    gate:
-      xConnection: 0
-      yConnection: 0
-  - prefab: {fileID: 8927785320675305719, guid: 05d5b685342308b4bb2047351355c4d5,
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
       type: 3}
     gate:
       xConnection: 0
