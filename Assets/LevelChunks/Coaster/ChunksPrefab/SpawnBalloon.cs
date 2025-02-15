@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class Balloon : MonoBehaviour
+public class SpawnBalloon : MonoBehaviour
 {
     public float liftSpeed = 1f;
     public float lifetime = 8f;

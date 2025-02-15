@@ -22,7 +22,7 @@ public class SpawnWithCollide : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collide detecte with {other.name}");
+        //Debug.Log($"Collide detecte with {other.name}");
 
         if (other.gameObject.CompareTag("Rider"))
         { 
