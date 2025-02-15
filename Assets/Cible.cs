@@ -6,22 +6,23 @@ public class tientonscripte : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Sphere")
+        if (collision.gameObject.tag == "Projectil")
         {
+            Destroy(this.gameObject);
             print("Enter");
         }
     }
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Sphere")
+        if (collision.gameObject.tag == "Projectil")
         {
-            Destroy(this.gameObject);
+
             print("Stay");
         }
     }
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Sphere")
+        if (collision.gameObject.tag == "Projectil")
         {
            
         }
