@@ -9,7 +9,7 @@ public class SpawnBall : MonoBehaviour
     private Camera cam = null;
     [SerializeField] private float spawnDistance = 20f;
     [SerializeField] private float forceAmount = 600f;
-    [SerializeField] PlayerManager playerManager;
+    [SerializeField] PlayerManager playerManager = PlayerManager.instance;
     int ballcount;
     int ballToSpawn;
 

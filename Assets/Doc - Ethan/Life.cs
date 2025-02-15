@@ -6,7 +6,6 @@ public class Life : MonoBehaviour
 {
     protected float m_health = 75f;
     public float m_healthMax = 75f;
-    [SerializeField] public PlayerManager playerManager;
 
     virtual public float GetHealth()
     {
@@ -31,7 +30,7 @@ public class Life : MonoBehaviour
 
     private void Die()
     {
-        playerManager.SetScore(playerManager.Getscore() + 1);
+        PlayerManager.instance.upScore();
         gameObject.SetActive(false);
     }
     private void OnCollisionEnter(Collision _other)

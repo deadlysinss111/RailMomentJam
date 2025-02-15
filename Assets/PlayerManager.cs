@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
-    PlayerManager instance;
+    [SerializeField] static public PlayerManager instance;
     int score = 0;
     float progress = 0;
     public int ballCount = 10;
@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     {
         return score;
     }
+    public void upScore()
+    {
+        score++;
+    }
     public void SetScore(int _score)
     {
         score = _score;
@@ -24,8 +28,9 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
+        if (instance != null)
         {
+
             Destroy(this);
             return;
         }
