@@ -18,3 +18,33 @@ MonoBehaviour:
     gate:
       xConnection: 0
       yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 2911564711240288758, guid: 93f8bf63205d8e7478a0bb8623bbbc48,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0

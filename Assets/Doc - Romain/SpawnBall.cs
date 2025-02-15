@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Splines;
 
 public class SpawnBall : MonoBehaviour
 {
-   [SerializeField] private GameObject objectToBeSpawned1 = null;
+    [SerializeField] private GameObject objectToBeSpawned1 = null;
     [SerializeField] private GameObject objectToBeSpawned2 = null;
     private Camera cam = null;
     [SerializeField] private float spawnDistance = 20f;
     [SerializeField] private float forceAmount = 600f;
-    [SerializeField] PlayerManager playerManager;
-    [SerializeField] SplineAnimate spline;
+    [SerializeField] PlayerManager playerManager = PlayerManager.instance;
     int ballcount;
     int ballToSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -63,10 +62,8 @@ public class SpawnBall : MonoBehaviour
                         // 🔹 Aligner la balle avec la direction du tir
                         ball.transform.rotation = Quaternion.LookRotation(direction);
 
-                    // 🔹 Appliquer la force dans la même direction
-                    float speed = spline.MaxSpeed;
-                    Debug.Log(speed);
-                    rb.AddForce(direction * (forceAmount + speed * 100));
+                        // 🔹 Appliquer la force dans la même direction
+                        rb.AddForce(direction * forceAmount);
                     
                 }
             }
