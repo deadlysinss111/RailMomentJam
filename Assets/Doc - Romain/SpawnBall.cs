@@ -66,7 +66,7 @@ public class SpawnBall : MonoBehaviour
                     // 🔹 Appliquer la force dans la même direction
                     float speed = spline.MaxSpeed;
                     Debug.Log(speed);
-                    rb.AddForce(direction * (forceAmount + speed * 100));
+                    rb.AddForce(direction * (forceAmount + speed * 300));
                     
                 }
             }
