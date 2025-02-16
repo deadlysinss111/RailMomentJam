@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68667849764208d40ab974a65ae4c8af, type: 3}
+  m_Name: StraightLibrary
+  m_EditorClassIdentifier: 
+  library:
+  - prefab: {fileID: 1710892471082109656, guid: f2e2053b65800a444a64272870a3f7c4,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 1710892471082109656, guid: 18a23b87768f2e34cbfd4a1141f68b32,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 1710892471082109656, guid: d60ca5985a7f8af4e88997656cbf9f4d,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 1710892471082109656, guid: 94b6cf7818f05db40b84b8ae5d78eeb5,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 1710892471082109656, guid: dc5fdeff69e7bea43a2868214cd9048b,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0
+  - prefab: {fileID: 1710892471082109656, guid: 05213ca4f44a8eb48b37b7687c8296c0,
+      type: 3}
+    gate:
+      xConnection: 0
+      yConnection: 0

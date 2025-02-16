@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 using UnityEngine.Splines;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 public class ChunkHandler : MonoBehaviour
 {
@@ -40,17 +44,40 @@ public class ChunkHandler : MonoBehaviour
             List<ChunkData> matching = GetMatchingChunks(_loadedChunksData[i - 1].gate.xConnection, _loadedChunksData[i - 1].gate.yConnection);
             ChunkData found = matching[Random.Range(0, matching.Count)];
             _loadedChunksData.Add(found);
-            List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[i-1].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
+            var newChunk = Instantiate(found.prefab);
+            newChunk.transform.name = i.ToString();
+
+            List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[i - 1].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
             var lastKnot = knotCollec[knotCollec.Count - 1];
-            //var lastKnot = knotCollec[knotCollec.Count - 1];
             Transform splineTransform = _loadedChunks[i - 1].Find("Spline");
             var newKnotCollec = (List<BezierKnot>)found.prefab.Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
-            var newKnot = newKnotCollec[0];
-            _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position - (Vector3)newKnot.Position + splineTransform.position, splineTransform.rotation));
+            var newKnotBegin = newKnotCollec[0];
+            //var newKnotEnd = newKnotCollec[newKnotCollec.Count - 1];
+
+            //Quaternion rotationValue = (Quaternion)lastKnot.Rotation * _loadedChunks[i - 1].transform.rotation;
+
+            //Vector3 dif = rotationValue * (Vector3)(newKnotEnd.Position - newKnotBegin.Position);
+
+            //int xSign = dif.x >= 0 ? -1 : 1;
+            //int ySign = dif.y >= 0? 1 : -1;
+            //int ySign = 1;
+            //int zSign = dif.z >= 0 ? -1 : 1;
+
+            // the commented calculus should work for trigo oriented rotations, need to be tested
+            //Vector3 newPos = new Vector3(xSign * _loadedChunks[i - 1].position.x, ySign * _loadedChunks[i - 1].position.y, zSign * _loadedChunks[i - 1].position.z);
+            //Vector3 newPos = new Vector3(zSign * _loadedChunks[i - 1].position.z, ySign * _loadedChunks[i - 1].position.y, xSign * _loadedChunks[i - 1].position.x);
+
+            newChunk.position = (Vector3)lastKnot.Position - (Vector3)newKnotBegin.Position + _loadedChunks[i - 1].position;
+
+
+            //newChunk.rotation = rotationValue;
+
+
+            _loadedChunks.Add(newChunk);
         }
     }
 
-    List<ChunkData> GetMatchingChunks(Chunk.XConnection xCon,  Chunk.YConnection yCon)
+    List<ChunkData> GetMatchingChunks(Chunk.XConnection xCon, Chunk.YConnection yCon)
     {
         List<ChunkData> matching = new();
         foreach (ChunkData chunk in chunkLibrary.library)
@@ -72,10 +99,10 @@ public class ChunkHandler : MonoBehaviour
         ChunkData found = matching[Random.Range(0, matching.Count)];
         _loadedChunksData.Add(found);
         List<BezierKnot> knotCollec = (List<BezierKnot>)_loadedChunks[loadedChunksAmount - 2].Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
-        var lastKnot = knotCollec[knotCollec.Count-1];
+        var lastKnot = knotCollec[knotCollec.Count - 1];
         Transform splineTransform = _loadedChunks[loadedChunksAmount - 2].Find("Spline");
         var newKnotCollec = (List<BezierKnot>)found.prefab.Find("Spline").GetComponent<SplineContainer>().Spline.Knots;
         var newKnot = newKnotCollec[0];
-        _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position - (Vector3)newKnot.Position + splineTransform.position, splineTransform.rotation));
+        _loadedChunks.Add(Instantiate(found.prefab, (Vector3)lastKnot.Position - (Vector3)newKnot.Position + _loadedChunks[loadedChunksAmount - 2].position, Quaternion.identity));
     }
 }
