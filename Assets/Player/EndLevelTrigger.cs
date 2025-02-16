@@ -11,6 +11,9 @@ public class EndLevelTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Rider"))
         {
             SceneManager.LoadScene(levelToLoad);
+            if(levelToLoad == "Level2") { 
+                SceneManager.LoadScene("HUDScene", LoadSceneMode.Additive);
+            }
         }
     }
 }

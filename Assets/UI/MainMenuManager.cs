@@ -8,7 +8,7 @@ public class MainMenuManager : MonoBehaviour
      */
     public void StartGame()
     {
-        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         SceneManager.LoadScene("HUDScene", LoadSceneMode.Additive);
     }
     public void OpenSettingsMenu()
