@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EndLevelTrigger : MonoBehaviour
 {
+    [SerializeField] string levelToLoad;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Rider"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 }
