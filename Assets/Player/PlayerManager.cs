@@ -62,7 +62,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.log("Not enougth coins");
+            //Debug.log("Not enougth coins");
             return false;
         }
     }
