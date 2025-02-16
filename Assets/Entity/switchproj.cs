@@ -10,7 +10,8 @@ public class switchproj : MonoBehaviour
     {
         if (other.gameObject.tag == "Switch")
         {
-            mplayerManager.ChangeBalloonCount(2);
+            Debug.Log("Switch");
+            mplayerManager.ChangeBallToSpawn(2);
         }
     }
 }

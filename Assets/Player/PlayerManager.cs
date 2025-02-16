@@ -79,4 +79,8 @@ public class PlayerManager : MonoBehaviour
     {
         return ballToSpawn;
     }
+    public void ChangeBallToSpawn(int value)
+    {
+        ballToSpawn = value;
+    }
 }
