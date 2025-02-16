@@ -10,6 +10,8 @@ TagManager:
   - Cible
   - Obstacle
   - player Life
+  - Rider
+  - Switch
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Balle
-  - 
+  - Rider
   - 
   - 
   - 
