@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
+    [SerializeField] private Transform particlesys; 
+
     protected float m_health = 75f;
     public float m_healthMax = 75f;
 
@@ -15,6 +16,7 @@ public class Life : MonoBehaviour
 
     void Start()
     {
+
         m_health = m_healthMax;
     }
 
@@ -31,11 +33,16 @@ public class Life : MonoBehaviour
 
     private void Die()
     {
+        //Set position of gameobjet particul to this object
+        if(particlesys != null)
+        {
+            var particle = Instantiate(particlesys, transform.position, transform.rotation);
+            particle.GetComponent<ParticleSystem>().Play();
+            Destroy(particle, 15);
+        }
+        
         PlayerManager.instance.upScore();
-        gameObject.SetActive(false);
-        Debug.Log("Bitch I'm not decease!d, bitch !     !");
-        if (gameObject.tag == "player Life")
-        { SceneManager.LoadScene("MainMenu", LoadSceneMode.Single); }
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision _other)
@@ -50,22 +57,11 @@ public class Life : MonoBehaviour
 
     private void CheckForDamage(GameObject _other)
     {
-        if (_other.gameObject.TryGetComponent<SpeedChanger>(out _))
-            return;
-
-
         Debug.Log("Collision with tag: " + _other.gameObject.tag);
 
         if (gameObject.CompareTag("player Life"))
         {
             TakeDamage(1);
-            Debug.Log("player collision Life");
-            return;
-        }
-
-        if (_other.gameObject.CompareTag("player Life"))
-        {
-            TakeDamage(10000);
             Debug.Log("player collision Life");
             return;
         }
