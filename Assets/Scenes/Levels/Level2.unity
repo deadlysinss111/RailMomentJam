@@ -6150,6 +6150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rider
       objectReference: {fileID: 0}
+    - target: {fileID: 1397208190582675712, guid: 6f2492ee715251547a60e34edbe91b49,
+        type: 3}
+      propertyPath: m_TagString
+      value: Rider
+      objectReference: {fileID: 0}
     - target: {fileID: 1427306021954477999, guid: 6f2492ee715251547a60e34edbe91b49,
         type: 3}
       propertyPath: m_LocalPosition.x
