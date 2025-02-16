@@ -1294,6 +1294,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mplayerManager: {fileID: 1017231267}
+--- !u!114 &456663024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7231623163002089458, guid: 6f2492ee715251547a60e34edbe91b49,
+    type: 3}
+  m_PrefabInstance: {fileID: 8440728580249616019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456663015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d0a0a8f808e6d4eb4ae263fcb4fb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &479359602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6187,7 +6199,7 @@ PrefabInstance:
         type: 3}
       propertyPath: rider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 456663024}
     - target: {fileID: 1658576298826235031, guid: 6f2492ee715251547a60e34edbe91b49,
         type: 3}
       propertyPath: speed
@@ -6255,13 +6267,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231623163002089458, guid: 6f2492ee715251547a60e34edbe91b49,
         type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231623163002089458, guid: 6f2492ee715251547a60e34edbe91b49,
+        type: 3}
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 709181594}
     - target: {fileID: 7231623163002089458, guid: 6f2492ee715251547a60e34edbe91b49,
         type: 3}
+      propertyPath: m_Duration
+      value: 44.740025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231623163002089458, guid: 6f2492ee715251547a60e34edbe91b49,
+        type: 3}
       propertyPath: m_MaxSpeed
-      value: 11185.006
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7525082079532752452, guid: 6f2492ee715251547a60e34edbe91b49,
         type: 3}
