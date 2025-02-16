@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
-    [SerializeField] private Transform particlesys; 
+    [SerializeField] private Transform particlesys;
 
     protected float m_health = 75f;
     public float m_healthMax = 75f;
@@ -34,13 +34,13 @@ public class Life : MonoBehaviour
     private void Die()
     {
         //Set position of gameobjet particul to this object
-        if(particlesys != null)
+        if (particlesys != null)
         {
             var particle = Instantiate(particlesys, transform.position, transform.rotation);
             particle.GetComponent<ParticleSystem>().Play();
             Destroy(particle, 15);
         }
-        
+
         PlayerManager.instance.upScore();
         Destroy(gameObject);
     }
@@ -50,7 +50,7 @@ public class Life : MonoBehaviour
         CheckForDamage(_other.gameObject);
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         CheckForDamage(other.gameObject);
     }
