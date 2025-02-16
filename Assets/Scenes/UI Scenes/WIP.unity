@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 291529452}
   - component: {fileID: 291529451}
   - component: {fileID: 291529450}
-  - component: {fileID: 291529455}
   - component: {fileID: 291529454}
   m_Layer: 5
   m_Name: CAN_WIP
@@ -233,18 +232,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2efd8ba7bace3994f82158a42cb3706a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &291529455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291529449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244c780338dd03148a735fff2257af52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &393483017
