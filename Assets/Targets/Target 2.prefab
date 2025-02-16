@@ -75,11 +75,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bffe5adf51a472449b37ada65e0da1d3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4300496096490604514}
+      addedObject: {fileID: 7325151215624116709}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bffe5adf51a472449b37ada65e0da1d3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7325151215624116709}
+      addedObject: {fileID: 6154615859178744657}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bffe5adf51a472449b37ada65e0da1d3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8375570474420777015}
   m_SourcePrefab: {fileID: 100100000, guid: bffe5adf51a472449b37ada65e0da1d3, type: 3}
 --- !u!1 &1751711915281293694 stripped
 GameObject:
@@ -87,7 +91,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1481188833048665135}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4300496096490604514
+--- !u!114 &7325151215624116709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751711915281293694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlesys: {fileID: 0}
+  m_healthMax: 75
+--- !u!65 &6154615859178744657
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,19 +124,27 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.041568227, y: 0.04828307, z: 0.0066033313}
-  m_Center: {x: 0.05162361, y: 0.07993929, z: -0.00034991023}
---- !u!114 &7325151215624116709
-MonoBehaviour:
+  m_Size: {x: 0.44214332, y: 0.464499, z: 0.06603331}
+  m_Center: {x: 0.50300545, y: 0.8085587, z: -0.0034991018}
+--- !u!95 &8375570474420777015
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751711915281293694}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
-  m_healthMax: 75
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b32265ea16811d419bc216467dd5a2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
