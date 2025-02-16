@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField] static public PlayerManager instance;
     int score = 0;
+    int coins = 0;
+    int gems = 0;
     float progress = 0;
     public int ballCount = 10;
     int ballToSpawn = 2;
@@ -17,14 +19,56 @@ public class PlayerManager : MonoBehaviour
     {
         return score;
     }
+
+    public int GetCoins()
+    {
+        return coins;
+    }
+
+    public int GetGems()
+    {
+        return gems;
+    }
+
+    public void UpCoins(int _coins)
+    {
+        coins += _coins;
+    }
+
+    public void UpGems(int _gems)
+    {
+        gems += _gems;
+    }
+
+    public bool IsEnougthAmount(int amount)
+    {
+        if(coins >= amount)
+        {
+            RemoveCoins(amount);
+            return true;
+        }
+        else
+        {
+            Debug.log("Not enougth coins");
+            return false;
+        }
+    }
+
+    public void RemoveCoins(int amount)
+    {
+        coins -= amount;
+    }
+
     public void upScore()
     {
         score++;
     }
+
     public void SetScore(int _score)
     {
         score = _score;
     }
+
     void Start()
     {
         if (instance != null)
@@ -41,12 +85,10 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
            ballToSpawn = 2;
-            Debug.Log("test");
         }
         else if (Input.GetKeyDown(KeyCode.Mouse2))
         {
             ballToSpawn = 1;
-            Debug.Log("test3");
         }
         //Debug.Log(ballCount);
     }
@@ -56,6 +98,7 @@ public class PlayerManager : MonoBehaviour
         progress += Time.deltaTime;
         return progress;
     }
+
     public int GetBallCount()
     {
         return ballCount;

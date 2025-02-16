@@ -31,6 +31,19 @@ public class Life : MonoBehaviour
     private void Die()
     {
         PlayerManager.instance.upScore();
+
+        if (gameObject.CompareTag("Cible")) {
+            Debug.Log("Collision avec une Cible !");
+            PlayerManager.instance.UpCoins(100);
+            Debug.Log(PlayerManager.instance.GetCoins());
+
+        }
+
+        else if (gameObject.CompareTag("player Life"))
+        {
+            Debug.Log("Collision avec Player Life !");
+            PlayerManager.instance.UpGems(1);
+        }
         gameObject.SetActive(false);
     }
 
@@ -70,7 +83,7 @@ public class Life : MonoBehaviour
 
         if (!(_other.gameObject.TryGetComponent<Projectile>(out Projectile projectile)))
             return;
-
+        
         TakeDamage(projectile.GetDamage());
     }
 
