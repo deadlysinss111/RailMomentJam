@@ -12,7 +12,7 @@ public class ChunkHandler : MonoBehaviour
 {
     [SerializeField] int loadedChunksAmount = 16;
     [SerializeField] ChunkLibrary chunkLibrary;
-    [SerializeField] SplineAnimate wagon;
+    [SerializeField] CustomSplineAnimate wagon;
 
     List<Transform> _loadedChunks;
     List<ChunkData> _loadedChunksData;
@@ -74,6 +74,8 @@ public class ChunkHandler : MonoBehaviour
 
 
             _loadedChunks.Add(newChunk);
+
+            wagon.Play();
         }
     }
 

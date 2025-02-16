@@ -641,6 +641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedChanger
       objectReference: {fileID: 0}
+    - target: {fileID: 2243809195118846750, guid: 5adf31a523974d646b66459b681d6f63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7157054941649913256, guid: 5adf31a523974d646b66459b681d6f63,
         type: 3}
       propertyPath: lerpFactor

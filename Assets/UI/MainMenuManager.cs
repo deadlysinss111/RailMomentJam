@@ -17,6 +17,6 @@ public class MainMenuManager : MonoBehaviour
     }
     public void OpenWIP()
     {
-        SceneManager.LoadScene("WIP", LoadSceneMode.Single);
+        SceneManager.LoadScene("Endless", LoadSceneMode.Single);
     }
 }
