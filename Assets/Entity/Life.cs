@@ -50,6 +50,10 @@ public class Life : MonoBehaviour
 
     private void CheckForDamage(GameObject _other)
     {
+        if (_other.gameObject.TryGetComponent<SpeedChanger>(out _))
+            return;
+
+
         Debug.Log("Collision with tag: " + _other.gameObject.tag);
 
         if (gameObject.CompareTag("player Life"))
