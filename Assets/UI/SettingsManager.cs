@@ -10,6 +10,8 @@ public class SettingsManager : MonoBehaviour
     /*
      *  FIELDS
      */
+    private AudioPlayer camAudioPlayer;
+
     [SerializeField] AudioMixer AudioMixer;
 
     [SerializeField] Slider GlobalVolumeSlider;
@@ -40,6 +42,11 @@ public class SettingsManager : MonoBehaviour
         SceneManager.UnloadSceneAsync("SettingsMenu");
     }
 
+    public void PlayClip(int index)
+    {
+        camAudioPlayer.PlayClip(index);
+    }
+
 
 
     /*
@@ -47,11 +54,6 @@ public class SettingsManager : MonoBehaviour
      */
     void Start()
     {
-
-    }
-
-    void Update()
-    {
-        
+        camAudioPlayer = GameObject.Find("Main Camera").GetComponent<AudioPlayer>();
     }
 }
