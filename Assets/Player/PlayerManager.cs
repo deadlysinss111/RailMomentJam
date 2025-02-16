@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] static public PlayerManager instance;
+    int wallet = 0;
     int score = 0;
     float progress = 0;
     public int ballCount = 10;
@@ -21,6 +22,21 @@ public class PlayerManager : MonoBehaviour
     {
         score++;
     }
+
+    public int GetWallet()
+    {
+        return wallet;
+    }
+    public void UpWallet(wallet)
+    {
+        wallet++;
+    }
+
+    public void SetWallet(int _wallet)
+    {
+        wallet = _wallet;
+    }
+
     public void SetScore(int _score)
     {
         score = _score;

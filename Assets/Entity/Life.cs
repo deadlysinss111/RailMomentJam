@@ -83,6 +83,7 @@ public class Life : MonoBehaviour
             return;
 
         TakeDamage(projectile.GetDamage());
+        GetHealth();
     }
 
     void Update()
