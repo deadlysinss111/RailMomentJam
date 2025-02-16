@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 8088912522241191623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9877796, y: 0, z: 8.200835}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,38 +91,6 @@ MonoBehaviour:
     m_ObjectData:
       m_Data: []
   m_Splines:
-  - m_EditModeType: 1
-    m_Knots:
-    - Position:
-        x: -17.07778
-        y: 0
-        z: 0.26916504
-      TangentIn:
-        x: -0
-        y: -0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    m_MetaData:
-    - Mode: 0
-      Tension: 0.5
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
   - m_EditModeType: 1
     m_Knots:
     - Position:
@@ -192,12 +160,13 @@ MonoBehaviour:
   m_Container: {fileID: 2773961800784676497}
   m_ItemsToInstantiate:
   - prefab: {fileID: 0}
-    Prefab: {fileID: 919132149155446097, guid: 85a779bbdf10dc54985c383b7dbf0b03, type: 3}
+    Prefab: {fileID: 4646489083720261979, guid: 2ac8aa48c84f85c4b92931133e9a0f1d,
+      type: 3}
     probability: 0
     Probability: 0
   m_Method: 1
   m_Space: 0
-  m_Spacing: {x: 1, y: 1}
+  m_Spacing: {x: 0.27, y: 0.27}
   m_Up: 1
   m_Forward: 2
   m_PositionOffset:
