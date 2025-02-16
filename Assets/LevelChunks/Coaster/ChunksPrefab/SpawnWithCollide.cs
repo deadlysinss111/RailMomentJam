@@ -13,7 +13,7 @@ public class SpawnWithCollide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerManager = PlayerManager.instance;
     }
 
     // Update is called once per frame
