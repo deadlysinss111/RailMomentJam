@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballCount: 999
-  balloonCount: 1
+  balloonCount: 50
   ball: {fileID: 5410695657476755907, guid: 46566c2098ebf47438593934b0cc779b, type: 3}
 --- !u!4 &1017231268
 Transform:
@@ -2144,6 +2144,11 @@ PrefabInstance:
       propertyPath: spawnPoint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -738287145395664529, guid: 630c4b964faa9134591d81c601458c54,
+        type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1017231267}
     - target: {fileID: 5093856767379341662, guid: 630c4b964faa9134591d81c601458c54,
         type: 3}
       propertyPath: m_Name
