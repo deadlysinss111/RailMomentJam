@@ -5,16 +5,10 @@ using UnityEngine;
 public class SpawnWithCollide : MonoBehaviour
 {
     [SerializeField] private GameObject objectToBeSpawned = null;
-    [SerializeField] public PlayerManager playerManager = null;
     public float speed = 10f;
     private int nbBalloon = 10;
     public Vector3 spawnPoint = new Vector3(0, 0, 0);
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerManager = PlayerManager.instance;
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,7 +19,7 @@ public class SpawnWithCollide : MonoBehaviour
     {
         //Debug.Log($"Collide detecte with {other.name}");
 
-        nbBalloon = playerManager.GetBalloonCount();
+        nbBalloon = PlayerManager.instance.GetBalloonCount();
 
         if (other.gameObject.CompareTag("Rider"))
         { 

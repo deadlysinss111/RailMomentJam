@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 1595205053283516182}
   - component: {fileID: 7935919343825790168}
   - component: {fileID: 4771700805725510727}
-  - component: {fileID: 1553261819770730728}
   - component: {fileID: 4882210506234441805}
+  - component: {fileID: 7231623163002089458}
   m_Layer: 6
   m_Name: Rider
-  m_TagString: Untagged
+  m_TagString: Rider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,29 +111,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1553261819770730728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397208190582675712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_LoopMode: 1
-  m_Method: 1
-  m_Duration: 50
-  m_MaxSpeed: 10
-  m_EasingMode: 0
-  m_AlignmentMode: 1
-  m_ObjectForwardAxis: 2
-  m_ObjectUpAxis: 1
-  m_StartOffset: 0
 --- !u!54 &4882210506234441805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,6 +138,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7231623163002089458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397208190582675712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d0a0a8f808e6d4eb4ae263fcb4fb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &3100469483360857510
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlesys: {fileID: 0}
   m_healthMax: 5
 --- !u!54 &4434524425165305523
 Rigidbody:
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc8f26791dedfe4cbef2edc32eaf62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rider: {fileID: 1553261819770730728}
+  rider: {fileID: 0}
   speed: 10
 --- !u!1 &5941598945877467575
 GameObject:

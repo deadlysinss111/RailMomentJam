@@ -6,7 +6,7 @@ using UnityEngine.Splines;
 
 public class SpeedHandler : MonoBehaviour
 {
-    [SerializeField] SplineAnimate rider;
+    [SerializeField] CustomSplineAnimate rider;
     public float speed;
     float targetSpeed;
     [NonSerialized] public float lerpFactor;
@@ -21,7 +21,6 @@ public class SpeedHandler : MonoBehaviour
 
     private void Update()
     {
-        print(speed);
         rider.MaxSpeed = speed;
         if ((targetSpeed - speed)*sign <= .5f)
         {
