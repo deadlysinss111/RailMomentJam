@@ -41,8 +41,15 @@ public class Life : MonoBehaviour
             Destroy(particle, 15);
         }
 
+        if(TryGetComponent<Animator>(out Animator animator))
+        {
+            animator.SetTrigger("Kill");
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         PlayerManager.instance.upScore();
-        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision _other)
@@ -81,5 +88,10 @@ public class Life : MonoBehaviour
     void Update()
     {
         //Debug.Log(m_health);
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }
