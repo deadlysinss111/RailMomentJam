@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
-    [SerializeField] private Transform particlesys;
-
     protected float m_health = 75f;
     public float m_healthMax = 75f;
 
@@ -16,7 +15,6 @@ public class Life : MonoBehaviour
 
     void Start()
     {
-
         m_health = m_healthMax;
     }
 
@@ -33,23 +31,24 @@ public class Life : MonoBehaviour
 
     private void Die()
     {
-        //Set position of gameobjet particul to this object
-        if (particlesys != null)
-        {
-            var particle = Instantiate(particlesys, transform.position, transform.rotation);
-            particle.GetComponent<ParticleSystem>().Play();
-            Destroy(particle, 15);
+        PlayerManager.instance.upScore();
+
+        if (gameObject.CompareTag("Cible")) {
+            Debug.Log("Collision avec une Cible !");
+            PlayerManager.instance.UpCoins(100);
+            Debug.Log(PlayerManager.instance.GetCoins());
+
         }
 
-        if(TryGetComponent<Animator>(out Animator animator))
+        else if (gameObject.CompareTag("player Life"))
         {
-            animator.SetTrigger("Kill");
+            Debug.Log("Collision avec Player Life !");
+            PlayerManager.instance.UpGems(1);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        PlayerManager.instance.upScore();
+        gameObject.SetActive(false);
+        Debug.Log("Bitch I'm not decease!d, bitch !     !");
+        if (gameObject.tag == "player Life")
+        { SceneManager.LoadScene("MainMenu", LoadSceneMode.Single); }
     }
 
     private void OnCollisionEnter(Collision _other)
@@ -57,18 +56,29 @@ public class Life : MonoBehaviour
         CheckForDamage(_other.gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) 
     {
         CheckForDamage(other.gameObject);
     }
 
     private void CheckForDamage(GameObject _other)
     {
+        if (_other.gameObject.TryGetComponent<SpeedChanger>(out _))
+            return;
+
+
         Debug.Log("Collision with tag: " + _other.gameObject.tag);
 
         if (gameObject.CompareTag("player Life"))
         {
             TakeDamage(1);
+            Debug.Log("player collision Life");
+            return;
+        }
+
+        if (_other.gameObject.CompareTag("player Life"))
+        {
+            TakeDamage(10000);
             Debug.Log("player collision Life");
             return;
         }
@@ -81,17 +91,12 @@ public class Life : MonoBehaviour
 
         if (!(_other.gameObject.TryGetComponent<Projectile>(out Projectile projectile)))
             return;
-
+        
         TakeDamage(projectile.GetDamage());
     }
 
     void Update()
     {
         //Debug.Log(m_health);
-    }
-
-    void DestroySelf()
-    {
-        Destroy(gameObject);
     }
 }
