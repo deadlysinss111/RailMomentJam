@@ -8,22 +8,6 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     /*
-     *  DEBUG
-     */
-    public TextMeshProUGUI DEBUGscreenSize;
-    private void Start()
-    {
-        Vector2Int screenSize = new Vector2Int();
-        screenSize.x = UnityEngine.Screen.width;
-        screenSize.y = UnityEngine.Screen.height;
-
-        DEBUGscreenSize.text = screenSize.ToString();
-    }
-
-
-
-
-    /*
      *  METHODS
      */
     public void OpenSettingsMenu()
