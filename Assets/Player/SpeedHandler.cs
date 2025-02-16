@@ -10,24 +10,27 @@ public class SpeedHandler : MonoBehaviour
     public float speed;
     float targetSpeed;
     [NonSerialized] public float lerpFactor;
+    [NonSerialized] public float oldSpeed;
+    int sign;
 
     private void Start()
     {
         targetSpeed = speed;
+        oldSpeed = speed;
     }
 
     private void Update()
     {
         print(speed);
         rider.MaxSpeed = speed;
-        if (Mathf.Abs(targetSpeed - speed) <= .5f)
+        if ((targetSpeed - speed)*sign <= .5f)
         {
             speed = targetSpeed;
             return;
         }
         else
         {
-            speed = Mathf.Lerp(speed, targetSpeed, lerpFactor * Time.deltaTime);
+            speed += Mathf.Lerp(0, targetSpeed - oldSpeed, (1/ lerpFactor) * Time.deltaTime);
         }
     }
 
@@ -38,6 +41,8 @@ public class SpeedHandler : MonoBehaviour
         {
             targetSpeed = changer.speedAimed;
             lerpFactor = changer.lerpFactor;
+            oldSpeed = speed;
+            sign = (oldSpeed - targetSpeed <= 0) ? 1 : -1;
         }
     }
 }
