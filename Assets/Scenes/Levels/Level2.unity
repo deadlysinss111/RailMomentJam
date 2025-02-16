@@ -410,7 +410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &103994019
 MeshCollider:
@@ -452,7 +451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &142789223
 MeshCollider:
@@ -1034,7 +1032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &404395999
 MeshCollider:
@@ -1076,7 +1073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &410903010
 MeshCollider:
@@ -1118,7 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &418359280
 MeshCollider:
@@ -1251,7 +1246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &455780761
 MeshCollider:
@@ -2075,7 +2069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &701921329
 MeshCollider:
@@ -2832,7 +2825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &719449378
 MeshCollider:
@@ -2874,7 +2866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &730717968
 MeshCollider:
@@ -3004,7 +2995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &758103738
 MeshCollider:
@@ -3046,7 +3036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &772553623
 MeshCollider:
@@ -3088,7 +3077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &822504434
 MeshCollider:
@@ -3130,7 +3118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &849564917
 MeshCollider:
@@ -3263,7 +3250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &889610242
 MeshCollider:
@@ -3305,7 +3291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &931535714
 MeshCollider:
@@ -3347,7 +3332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &934594674
 MeshCollider:
@@ -3389,7 +3373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &988101582
 MeshCollider:
@@ -3569,7 +3552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1023835278
 MeshCollider:
@@ -3611,7 +3593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1059496905
 MeshCollider:
@@ -3653,7 +3634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1063949122
 MeshCollider:
@@ -3695,7 +3675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1083615662
 MeshCollider:
@@ -3737,7 +3716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1083673234
 MeshCollider:
@@ -3870,7 +3848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1134129712
 MeshCollider:
@@ -3912,7 +3889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1168559944
 MeshCollider:
@@ -4136,7 +4112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1209707558
 MeshCollider:
@@ -4178,7 +4153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1215780395
 MeshCollider:
@@ -4763,7 +4737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1435609233
 MeshCollider:
@@ -5546,7 +5519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1709358835
 MeshCollider:
@@ -5658,6 +5630,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5adf31a523974d646b66459b681d6f63, type: 3}
+--- !u!1001 &1796606526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -515.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 596.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8019545
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5973851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 73.366
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685272418569843721, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012407871142883243, guid: 92f025da73b44674298cc5ec6875ff29,
+        type: 3}
+      propertyPath: m_Name
+      value: EndLvlTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92f025da73b44674298cc5ec6875ff29, type: 3}
 --- !u!1 &1807066983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bffe5adf51a472449b37ada65e0da1d3,
@@ -5676,7 +5716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1807066985
 MeshCollider:
@@ -5912,7 +5951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f61f8c14412c4e82010ed9bf32bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesys: {fileID: 0}
   m_healthMax: 1
 --- !u!64 &1942908803
 MeshCollider:
@@ -6358,3 +6396,4 @@ SceneRoots:
   - {fileID: 1252649335}
   - {fileID: 247207819}
   - {fileID: 1847952344}
+  - {fileID: 1796606526}
