@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     float progress = 0;
     public int ballCount = 10;
     public int balloonCount = 1;
-    int ballToSpawn = 2;
+    int ballToSpawn = 1;
     [SerializeField] private GameObject ball = null;
 
     public int GetBalloonCount()
@@ -78,5 +78,9 @@ public class PlayerManager : MonoBehaviour
     public int GetBallToSpawn()
     {
         return ballToSpawn;
+    }
+    public void ChangeBallToSpawn(int value)
+    {
+        ballToSpawn = value;
     }
 }
