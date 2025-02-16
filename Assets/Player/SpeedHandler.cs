@@ -21,7 +21,7 @@ public class SpeedHandler : MonoBehaviour
 
     private void Update()
     {
-        print(speed);
+        //print(speed);
         rider.MaxSpeed = speed;
         if ((targetSpeed - speed)*sign <= .5f)
         {
